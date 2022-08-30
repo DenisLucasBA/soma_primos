@@ -1,0 +1,26 @@
+algoritmo "soma_primos"
+var
+   x, op1, op2, op3, s: inteiro
+inicio
+   escreva(" Insira um número: ")
+   leia (x)
+   s <- 0
+   se x <= 1 entao
+      escreval (" Número inválido!")
+   senao
+      para op2 de 1 ate x faca
+         op1 <- 0
+         para op3 de 1 ate op2 faca
+            se(op2 % op3= 0) entao
+               op1 <- op1 + 1
+            fimse
+         fimpara
+         se op1 = 2 entao
+            s <- s+op2
+            escreval(op2)
+         fimse
+      fimpara
+   fimse
+   escreval(" Soma dos primos anteriores a ",x," = ",s)
+   escreval(" Caso",x," não apareça na lista, não é primo.")
+fimalgoritmo
